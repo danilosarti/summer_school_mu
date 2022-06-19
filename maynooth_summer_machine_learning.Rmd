@@ -1,0 +1,78 @@
+---
+title: 'Introduction to Artifical Ingelligence and Machine Learning'
+author: Danilo A. Sarti \newline \texttt{danilo.sarti@mu.ie}   \newline \vspace{1cm}
+  \newline \includegraphics[width=3cm]{/Volumes/Dell Portab/talks_presentations/maynooth_uni_logo.jpg}
+  \newline \vspace{1cm}
+  https://danilosarti.github.io
+  \newline PRESS RECORD 
+output:
+  beamer_presentation:
+    includes:
+classoption: "aspectratio=169"
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(dev = 'pdf', fig.height = 5)
+options(width = 40)
+par(mar=c(3,3,2,1), mgp=c(2,.7,0), tck=-.01,las=1)
+pkgs = c('R2jags','rjags', 'lubridate', 'tidyverse','forecast')
+lapply(pkgs, library, character.only = TRUE)
+```
+
+# Hello, presentations and what we will do here!!
+
+- Tell us who you are, what you are working on, and what you hope to get out of the week. 
+- What are Intelligence, Artificial Intelligence, and Machine Learning. 
+- Where are these things being used? Why? 
+- Languages or On how to talk to machines. 
+- If you want to know what a brain is, you should build one!! 
+- The brain: learning how to learn, focus, and diffuse modes of the brain, neurons, and neuron networks.
+- Beyond the games!! 
+- Step by Step example of application. 
+
+# What are Intelligence, Artificial Intelligence, and Machine Learning. 
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/inf_knw.png}
+\caption{}{Intelligence: convert information into knowledge. Source: https://thoughtcatalog.com}
+\end{figure}
+\end{column}
+\begin{column}{0.48\textwidth}
+
+
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/art_inte.png}
+\caption{}{Artificial Intelligence. Source: https://www.teachingtimes.com}
+\end{figure}
+
+\end{column}
+\end{columns}
+
+# What are Intelligence, Artificial Intelligence, and Machine Learning. 
+
+\begin{figure}
+\includegraphics[width=10cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/machine2.png}
+\caption{}{Machine Learning. Source: https://www.teachingtimes.com}
+\end{figure}
+
+
+
+
+# Where are these things being used? Why? 
+
+#  Languages or On how to talk to machines! 
+
+# If you want to know what a brain is, you should build one!! 
+
+# The brain: learning how to learn, focus, and diffuse modes of the brain, neurons, and neural networks.
+
+- How many computers to make a brain?
+
+# Deep learning... Deep fake!  
+
+
+# Beyond the games!! Game theory and Algorithmic trading. 
+
+# Step by Step example of application. 
+
