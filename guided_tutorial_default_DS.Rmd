@@ -1,0 +1,136 @@
+---
+title: "Guided tutorials for ML summer"
+author: "Danilo Sarti"
+date: "6/20/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE)
+```
+
+```{r}
+library(corrplot)
+library(RColorBrewer)
+require(GGally)
+```
+
+
+# Introduction to credit risk analysis: Would you give me some money?
+
+* The data set default contains the following variables:  
+
+```{r}
+default <- readRDS("/Volumes/Dell Portab/talks_presentations/default.rds")
+head(default)
+```
+
+* The data set reflects South America reality.
+
+* This example is a very simple representation to what happens in reality. Banks use much more information!!
+
+# We will calculate some correlations
+
+```{r}
+default$bsex=ifelse(default$sex=="F",1,0)
+default$bregion=ifelse(default$region==2,1,0)
+head(default)
+
+ggpairs(default[,c(3,4,5,6,7,8)])
+
+
+corrplot(cor(default[,c(3,4,5,6,7,8)]), type="upper", order="hclust",
+         col=brewer.pal(n=8, name="RdYlBu"))
+```
+
+# Logistic Regression 
+
+Logistic Regression is a ML procedure which helps us to predict the chances of something to happen or not! 
+
+
+```{r}
+mod1Logit<-glm(default~bsex+bregion+value_op+income+age,data=default,
+             family=binomial("logit"))
+summary(mod1Logit)
+```
+
+A second model!!
+
+```{r}
+mod2Logit<-glm(default~bsex+value_op,data=default,
+             family=binomial("logit"))
+summary(mod2Logit)
+
+coef(mod2Logit)
+```
+
+Predicting some probabilities of default
+```{r}
+## bsex=1 (woman) valueop=3000 
+1/(1+exp(-(-1.0481021-1.1812830*1+0.0004319* 3000)))
+
+## bsex=0 (man) valueop=3000 
+1/(1+exp(-(-1.0481021-1.1812830*0+0.0004319* 3000)))
+# with predict
+newbsex=c(1,0) ## woman and man 
+newvalueop=c(3000,3000)
+predict(mod2Logit,newdata=data.frame(bsex=newbsex,value_op=newvalueop),type="response")
+
+```
+
+```{r}
+require(erer)
+mod2Logit<-glm(default~bsex+value_op,data=default,
+             family=binomial("logit"),x=TRUE)
+maBina(w=mod2Logit,digits=7) 
+```
+
+
+
+# Making some plots 
+
+```{r}
+with(data=default,plot(value_op,default,col="blue",xlim=c(0,7000),ylim=c(0,1)),ylab="prob")
+## results regarding the women 
+title(expression(paste(hat(P),"(default|sex,value_op) - mod2Logit")))
+new_value_op=c(0,7000)
+new_bsex=rep(1,length(new_value_op))
+new_default<-predict(mod2Logit,newdata=data.frame(bsex=new_bsex,value_op=new_value_op),type="response")
+lines(new_value_op,new_default,type="l",col="deeppink")
+## resultados para os homens
+new_bsex=rep(0,length(new_value_op))
+new_default<-predict(mod2Logit,newdata=data.frame(bsex=new_bsex,value_op=new_value_op),type="response")
+lines(new_value_op,new_default,col="blue")
+```
+
+
+
+# Neural Network
+
+```{r}
+# install package
+#install.packages("neuralnet")
+# load library
+require(neuralnet)
+
+# creating train set
+def_train=default[c(1:180),]
+
+# fit neural network
+nn=neuralnet(default~bsex+bregion+value_op+income+age,data=def_train, hidden=3,act.fct = "logistic",
+                linear.output = FALSE)
+
+
+plot(nn)
+
+
+
+```
+
+```{r}
+# creating test set
+test=default[c(180:360),]
+Predict=compute(nn,test)
+head(Predict$net.result)
+```
+
