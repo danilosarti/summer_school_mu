@@ -4,7 +4,7 @@ author: Danilo A. Sarti \newline \texttt{danilo.sarti@mu.ie}   \newline \vspace{
   \newline \includegraphics[width=3cm]{/Volumes/Dell Portab/talks_presentations/maynooth_uni_logo.jpg}
   \newline \vspace{1cm}
   https://danilosarti.github.io
-  \newline PRESS RECORD 
+  \newline 
 output:
   beamer_presentation:
     includes:
@@ -23,11 +23,11 @@ lapply(pkgs, library, character.only = TRUE)
 - Tell us who you are, what you are working on, and what you hope to get out of the week. 
 - What are Intelligence, Artificial Intelligence, and Machine Learning. 
 - Where are these things being used? Why? 
-- Languages or On how to talk to machines. 
+- PLaying around with AI and ML. 
 - If you want to know what a brain is, you should build one!! 
 - The brain: learning how to learn, focus, and diffuse modes of the brain, neurons, and neuron networks.
 - Beyond the games!! 
-- Step by Step example of application. 
+- Step by Step example of application. How the banks make money and help people. 
 
 # What are Intelligence, Artificial Intelligence, and Machine Learning. 
 
@@ -39,13 +39,10 @@ lapply(pkgs, library, character.only = TRUE)
 \end{figure}
 \end{column}
 \begin{column}{0.48\textwidth}
-
-
 \begin{figure}
 \includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/art_inte.png}
 \caption{}{Artificial Intelligence. Source: https://www.teachingtimes.com}
 \end{figure}
-
 \end{column}
 \end{columns}
 
@@ -53,26 +50,187 @@ lapply(pkgs, library, character.only = TRUE)
 
 \begin{figure}
 \includegraphics[width=10cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/machine2.png}
-\caption{}{Machine Learning. Source: https://www.teachingtimes.com}
+\caption{}{Machine Learning. Source: google + author}
 \end{figure}
-
-
 
 
 # Where are these things being used? Why? 
 
-#  Languages or On how to talk to machines! 
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=3cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/social.png}
+\caption{}{Applications of ML: Social media and Streaming Source: https://google.com}
+\end{figure}
+\end{column}
+
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=5cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/self_driven.png}
+\caption{}{Applications of ML: Self driven cars: https://www.siliconrepublic.com}
+\end{figure}
+\end{column}
+\end{columns}
+
+# Where are these things being used? Why?
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/precision_med.png}
+\caption{}{Applications of ML: Precision Medicine Source: https://google.com}
+\end{figure}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/agr_pre.png}
+\caption{}{Applications of ML: Precision Agriculture Source: https://google.com}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+# Using ML for solving a problem: Feeding people and animals. 
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/human_pop.png}
+\caption{}{Human population. Source: Our world in data.}
+\end{figure}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/food.png}
+\caption{}{Food production. Source: https://www.hi-in.com}
+\end{figure}
+\end{column}
+\end{columns}
+
+# ML and where does the food come from!
+
+\begin{columns}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/METs.png}
+\caption{}{Plant breeding and agriculture. Source: The author.}
+\end{figure}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{figure}
+\includegraphics[width=6cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/agr_pre.png}
+\caption{}{ML for Agriculture. Source the author.}
+\end{figure}
+\end{column}
+\end{columns}
+
+# Google experiments !!! 
+
+- https://experiments.withgoogle.com/
+- Chopin explorer. 
+- Drawing with draw. 
+- Composing with song maker.
+- Knowing boomy.
+- Crazy videos with ML. 
+
+# Music: Composing with song maker!!! 
+
+https://musiclab.chromeexperiments.com/Song-Maker/
+
+# Music: Composing with AI!!!
+
+https://boomy.com/
+
+# Challenge:
+
+Compose you own piece of music!!
+
+https://musiclab.chromeexperiments.com/
+
+More serious stuff:
+
+https://experiments.withgoogle.com/assisted-melody
+
+Some crazy videos ML does for us:
+https://www.youtube.com/watch?v=l3C2V6y8AUk&ab_channel=DaniloSarti
+
+https://www.youtube.com/watch?v=qw_k5u_CEKY&ab_channel=DaniloSarti
+# 
 
 # If you want to know what a brain is, you should build one!! 
 
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[width=5cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/neruosc.png}
+\caption{}{Neuroscience. Source: Google.}
+\end{figure}
+\end{column}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[width=4cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/brain.png}
+\caption{}{Brain. Source: Webcommons.}
+\end{figure}
+\end{column}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[width=3cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/zoombie.png}
+\caption{}{Zoombie. Source: Google.}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+
 # The brain: learning how to learn, focus, and diffuse modes of the brain, neurons, and neural networks.
 
-- How many computers to make a brain?
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[width=1cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/alien_neuron.png}
+\caption{}{Alien Neuron. Source: Barbara Oakley LHL.}
+\end{figure}
+\end{column}
 
-# Deep learning... Deep fake!  
+\begin{column}{0.3\textwidth}
+\begin{figure}
+\includegraphics[width=5cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/foc_dif2.png}
+\caption{}{Modes of the brain. Source: Barbara Oakley LHL.}
+\end{figure}
+\end{column}
+\end{columns}
 
 
-# Beyond the games!! Game theory and Algorithmic trading. 
+- 30 Times More Powerful Than The Best Supercomputers
+
+# Of pizzas and brain
+
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=5cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/pomodoro.png}
+\caption{}{Pomodoro. Source: Teamwork.com}
+\end{figure}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+- Focused work. 
+- Break 
+- https://pomofocus.io/
+\end{column}
+
+\end{columns}
+
+
+
+# Machine Learn learnt from the brain 
+
+\begin{figure}
+\includegraphics[width=8cm]{/Volumes/Dell Portab/talks_presentations/maynooth_mach_imgs/neural_network.png}
+\caption{}{Pomodoro. Source: Stone 2020}
+\end{figure}
+
+# Beyond the games!! Game theory and Algorithmic trading.
 
 # Step by Step example of application. 
 
