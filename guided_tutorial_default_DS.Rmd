@@ -3,6 +3,8 @@ title: "Guided tutorials for ML summer"
 author: "Danilo Sarti"
 date: "6/20/2022"
 output: html_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -64,7 +66,8 @@ summary(mod2Logit)
 coef(mod2Logit)
 ```
 
-Predicting some probabilities of default
+Predicting some probabilities of default.
+
 ```{r}
 ## bsex=1 (woman) valueop=3000 
 1/(1+exp(-(-1.0481021-1.1812830*1+0.0004319* 3000)))
@@ -127,10 +130,25 @@ plot(nn)
 
 ```
 
+Black: connections between layers and the weights on each connection. 
+
+Blue: The bias term added in each step. 
+
 ```{r}
 # creating test set
 test=default[c(180:360),]
 Predict=compute(nn,test)
 head(Predict$net.result)
+```
+
+
+```{r}
+#dev.off()
+df=data.frame(test)
+test$predicted=Predict$net.result
+plot(test$value_op,test$predicted)
+library(ggplot2)
+ggplot(data=test, aes(x=value_op,y=predicted,col=as.factor(sex)))+geom_point()
+
 ```
 

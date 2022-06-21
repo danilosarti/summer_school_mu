@@ -27,7 +27,10 @@ lapply(pkgs, library, character.only = TRUE)
 - If you want to know what a brain is, you should build one!! 
 - The brain: learning how to learn, focus, and diffuse modes of the brain, neurons, and neuron networks.
 - Beyond the games!! 
-- Step by Step example of application. How the banks make money and help people. 
+- Step by Step example of application. How the banks make money and help people.
+- Github: https://github.com/danilosarti/summer_school_mu
+
+
 
 # What are Intelligence, Artificial Intelligence, and Machine Learning. 
 
